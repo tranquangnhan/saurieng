@@ -4,7 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sầu Riêng Musangking Cô Tâm - Thượng Hạng Chín Tự Nhiên</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Preconnect to CDN -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="./img/landingpage/bg1.jpg" as="image">
+    
+    <!-- Critical CSS -->
+    <style>
+      /* Inline critical CSS here */
+      :root{--primary-yellow:#FFD166;--secondary-yellow:#FFD166}
+      body{margin:0;font-family:'Segoe UI',sans-serif;line-height:1.6}
+      .container{width:100%;max-width:1200px;margin:0 auto;padding:0 15px}
+    </style>
+    
+    <!-- Non-critical CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome with preload -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Thêm vào head -->
     <meta name="description" content="Sầu Riêng Musangking Cô Tâm - 
 Sầu riêng Musangking cắt già chín cây tự nhiên, Tươi rói, cơm vàng hạt lép, ngọt đậm đà. Giao hàng tận nơi TP.HCM. Đặt ngay 0978 212 783">
