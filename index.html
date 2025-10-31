@@ -664,7 +664,26 @@ Sầu riêng Musangking cắt già chín cây tự nhiên, Tươi rói, cơm và
             z-index: 2;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
+        /* Animation cho pricing cards */
+        .pricing-card {
+            animation: fadeInUp 0.8s ease forwards;
+        }
 
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stagger animation cho các card */
+        .pricing-card:nth-child(1) { animation-delay: 0.1s; }
+        .pricing-card:nth-child(2) { animation-delay: 0.2s; }
+        .pricing-card:nth-child(3) { animation-delay: 0.3s; }
 
         /* Testimonials Section */
         .testimonials {
@@ -2385,7 +2404,31 @@ Sầu riêng Musangking cắt già chín cây tự nhiên, Tươi rói, cơm và
         });
         </script>
 
-
+        <script>
+        // Intersection Observer cho animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const pricingCards = document.querySelectorAll('.pricing-card');
+            
+            const pricingObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            pricingCards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                pricingObserver.observe(card);
+            });
+        });
+        </script>
 </body>
 
 </html>
