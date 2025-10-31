@@ -282,7 +282,7 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
-        .video-content p {
+        .video-content .box-content {
             font-size: 1.3rem;
             margin-bottom: 30px;
             max-width: 700px;
@@ -309,8 +309,8 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
                         inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }/* Decorative elements */
-        .video-content p::before,
-        .video-content p::after {
+        .video-content .box-content::before,
+        .video-content .box-content::after {
             content: '"';
             position: absolute;
             font-size: 4rem;
@@ -319,12 +319,12 @@
             font-family: serif;
         }
 
-        .video-content p::before {
+        .video-content .box-content::before {
             top: 10px;
             left: 20px;
         }
 
-        .video-content p::after {
+        .video-content .box-content::after {
             bottom: 10px;
             right: 20px;
             transform: rotate(180deg);
@@ -333,7 +333,7 @@
 
 
 
-        
+
 
         .video-container {
             margin: 40px auto;
@@ -1287,8 +1287,11 @@
     <section class="video-section" id="home">
         <div class="container">
             <div class="video-content fade-in">
-                <h2 id="main-heading" class="video-content h1">2 năm bén duyên với sầu riêng – phát hiện quy luật tự nhiên đầy thú vị</h2>
-                <p>"Trái sầu riêng cũng giống với các loại trái cây khác, cắt già để 3-7 ngày chín tự nhiên sẽ đảm bảo độ ngon tươi rói – khác biệt. Thơm hơn, ngọt hơn, ngon hơn nha! Mời mọi người xem hết clip để an tâm thưởng thức sầu riêng nhà Cô Tâm nhé!"</p>
+                <div class="box-content">
+                    <h2 id="main-heading" class="video-content h1">2 năm bén duyên với sầu riêng – phát hiện quy luật tự nhiên đầy thú vị</h2>
+                    <p>"Trái sầu riêng cũng giống với các loại trái cây khác, cắt già để 3-7 ngày chín tự nhiên sẽ đảm bảo độ ngon tươi rói – khác biệt. Thơm hơn, ngọt hơn, ngon hơn nha! Mời mọi người xem hết clip để an tâm thưởng thức sầu riêng nhà Cô Tâm nhé!"</p>
+                </div>
+                
                 
                 <div class="video-container">
                     <div class="youtube-video-wrapper">
