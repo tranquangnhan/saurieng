@@ -2,7 +2,8 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- QUAN TRỌNG: Sửa viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Trang Không Tìm Thấy - Sầu Riêng Musangking Cô Tâm</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -35,21 +36,27 @@
             justify-content: center;
             padding: 20px;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
+            /* Đảm bảo không bị scale */
+            transform: none !important;
         }
 
         .container {
             max-width: 800px;
+            width: 100%;
             text-align: center;
             position: relative;
             z-index: 2;
+            /* Đảm bảo container không bị scale */
+            transform: none !important;
         }
 
-        /* Background decorations */
+        /* Sửa background decorations */
         .durian-bg {
             position: absolute;
             opacity: 0.1;
             z-index: 1;
+            pointer-events: none;
         }
 
         .durian-1 {
@@ -76,16 +83,19 @@
             animation: float 7s ease-in-out infinite 1s;
         }
 
-        /* Error Content */
+        /* Error Content - Sửa kích thước */
         .error-content {
             background: rgba(255, 255, 255, 0.95);
-            padding: 50px 40px;
+            padding: 40px 30px;
             border-radius: 25px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
             border: 2px solid var(--primary-yellow);
             backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
+            width: 100%;
+            /* Đảm bảo không bị scale */
+            transform: none !important;
         }
 
         .error-content::before {
@@ -99,7 +109,7 @@
         }
 
         .error-number {
-            font-size: 8rem;
+            font-size: 6rem; /* Giảm từ 8rem */
             font-weight: 900;
             color: var(--wood-brown);
             margin-bottom: 10px;
@@ -108,42 +118,47 @@
         }
 
         .error-title {
-            font-size: 2.5rem;
+            font-size: 2rem; /* Giảm từ 2.5rem */
             color: var(--wood-brown);
             margin-bottom: 20px;
             font-weight: 700;
+            line-height: 1.3;
         }
 
         .error-message {
-            font-size: 1.3rem;
+            font-size: 1.1rem; /* Giảm từ 1.3rem */
             color: var(--text-light);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             line-height: 1.6;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 100%;
         }
 
         /* CTA Buttons */
         .cta-buttons {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 40px 0 30px;
+            margin: 30px 0 25px;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 15px 30px;
+            gap: 8px;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 700;
             transition: all 0.3s ease;
             border: 2px solid transparent;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            /* Đảm bảo không bị scale */
+            transform: none !important;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px) !important;
         }
 
         .btn-primary {
@@ -153,7 +168,6 @@
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(255, 209, 102, 0.4);
             background: linear-gradient(135deg, var(--secondary-yellow), var(--primary-yellow));
         }
@@ -166,7 +180,6 @@
         }
 
         .btn-secondary:hover {
-            transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(46, 139, 87, 0.2);
             background: var(--primary-green);
             color: white;
@@ -175,66 +188,67 @@
         /* Contact Info */
         .contact-info {
             background: var(--light-yellow);
-            padding: 25px;
+            padding: 20px;
             border-radius: 15px;
-            margin-top: 30px;
+            margin-top: 25px;
             border: 1px solid var(--primary-yellow);
         }
 
         .contact-title {
             color: var(--wood-brown);
-            font-size: 1.2rem;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
             font-weight: 600;
         }
 
         .phone-number {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--primary-green);
-            margin: 10px 0;
+            margin: 8px 0;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 12px;
+            margin-top: 15px;
         }
 
         .social-link {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background: var(--white);
             border-radius: 50%;
             color: var(--wood-brown);
             text-decoration: none;
             transition: all 0.3s ease;
             border: 2px solid var(--primary-yellow);
+            transform: none !important;
         }
 
         .social-link:hover {
             background: var(--primary-yellow);
-            transform: translateY(-2px);
+            transform: translateY(-2px) !important;
             box-shadow: 0 5px 15px rgba(255, 209, 102, 0.3);
         }
 
         /* Search Box */
         .search-box {
-            max-width: 400px;
-            margin: 30px auto;
+            max-width: 350px;
+            margin: 25px auto;
             position: relative;
         }
 
         .search-input {
             width: 100%;
-            padding: 15px 50px 15px 20px;
+            padding: 12px 45px 12px 15px;
             border: 2px solid var(--primary-yellow);
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             background: white;
             transition: all 0.3s ease;
         }
@@ -252,8 +266,8 @@
             transform: translateY(-50%);
             background: var(--primary-yellow);
             border: none;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             color: var(--wood-brown);
             cursor: pointer;
@@ -262,30 +276,74 @@
 
         .search-btn:hover {
             background: var(--secondary-yellow);
-            transform: translateY(-50%) scale(1.1);
         }
 
+        /* Animations */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(var(--rotation, 0deg));
+            }
+            50% {
+                transform: translateY(-15px) rotate(var(--rotation, 0deg));
+            }
+        }
 
-      
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
+        .error-content {
+            animation: fadeIn 0.8s ease-out;
+        }
 
-        /* Responsive */
+        /* Logo */
+        .logo {
+            margin-bottom: 25px;
+        }
+
+        .logo img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        /* QUAN TRỌNG: Reset tất cả transform không mong muốn */
+        * {
+            max-width: 100%;
+        }
+
+        /* Responsive - Sửa cho mobile */
         @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .error-content {
+                padding: 30px 20px;
+            }
+            
             .error-number {
-                font-size: 6rem;
+                font-size: 4rem;
             }
             
             .error-title {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
             
             .error-message {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 12px;
             }
             
             .btn {
@@ -294,8 +352,38 @@
                 justify-content: center;
             }
             
+            .durian-1, .durian-2, .durian-3 {
+                font-size: 4rem;
+            }
+            
+            .phone-number {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .error-number {
+                font-size: 3rem;
+            }
+            
+            .error-title {
+                font-size: 1.3rem;
+            }
+            
+            .error-message {
+                font-size: 0.95rem;
+            }
+            
             .error-content {
-                padding: 40px 25px;
+                padding: 25px 15px;
+            }
+            
+            .contact-info {
+                padding: 15px;
+            }
+            
+            .search-box {
+                max-width: 280px;
             }
             
             .durian-1, .durian-2, .durian-3 {
@@ -303,36 +391,22 @@
             }
         }
 
-        @media (max-width: 480px) {
+        /* Đảm bảo không có zoom không mong muốn */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 95%;
+            }
+        }
+
+        /* Fix cho tablet */
+        @media (min-width: 769px) and (max-width: 1024px) {
             .error-number {
-                font-size: 4rem;
+                font-size: 5rem;
             }
             
             .error-title {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
-            
-            .error-message {
-                font-size: 1rem;
-            }
-            
-            .error-content {
-                padding: 30px 20px;
-            }
-            
-            .phone-number {
-                font-size: 1.3rem;
-            }
-        }
-
-        /* Logo */
-        .logo {
-            margin-bottom: 30px;
-        }
-
-        .logo img {
-            max-width: 120px;
-            height: auto;
         }
     </style>
 </head>
@@ -345,7 +419,7 @@
     <div class="container">
         <!-- Logo -->
         <div class="logo">
-            <img src="./img/logo.png" alt="Sầu Riêng Musangking Cô Tâm">
+            <img src="./img/logo.png" alt="Sầu Riêng Musangking Cô Tâm" onerror="this.style.display='none'">
         </div>
 
         <div class="error-content">
@@ -358,14 +432,7 @@
                 thơm ngon nhất hoặc liên hệ trực tiếp với chúng tôi.
             </p>
 
-            <!-- Search Box -->
-            <div class="search-box">
-                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm..." id="searchInput">
-                <button class="search-btn" onclick="handleSearch()">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-
+            
             <!-- CTA Buttons -->
             <div class="cta-buttons">
                 <a href="/" class="btn btn-primary">
@@ -391,7 +458,7 @@
                         <i class="fab fa-facebook-f"></i>
                     </a>
                     <a href="https://zalo.me/0978212783" class="social-link" target="_blank">
-                        <i class="fab fa-zalo">Z</i>
+                        Z
                     </a>
                     <a href="https://www.tiktok.com/@cotammusangking.official" class="social-link" target="_blank">
                         <i class="fab fa-tiktok"></i>
@@ -401,65 +468,6 @@
         </div>
     </div>
 
-    <script>
-        // Xử lý tìm kiếm
-        function handleSearch() {
-            const searchTerm = document.getElementById('searchInput').value.trim();
-            if (searchTerm) {
-                // Chuyển hướng đến trang chủ với query string
-                window.location.href = `/?s=${encodeURIComponent(searchTerm)}`;
-            }
-        }
 
-        // Enter để search
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                handleSearch();
-            }
-        });
-
-        // Auto focus search input
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('searchInput').focus();
-        });
-
-        // Tracking 404 errors
-        if (typeof gtag !== 'undefined') {
-            gtag('event', '404_error', {
-                'event_category': 'Error',
-                'event_label': window.location.href,
-                'non_interaction': true
-            });
-        }
-
-        // Hiệu ứng typewriter cho message (tùy chọn)
-        const message = "Ôi! Trang Này Đã \"Chín\" Mất Rồi! 🍈";
-        let i = 0;
-        const titleElement = document.querySelector('.error-title');
-        
-        function typeWriter() {
-            if (i < message.length) {
-                titleElement.innerHTML = message.substring(0, i + 1) + '<span class="cursor">|</span>';
-                i++;
-                setTimeout(typeWriter, 100);
-            } else {
-                titleElement.innerHTML = message;
-            }
-        }
-
-        // Bắt đầu hiệu ứng typewriter sau 1 giây
-        setTimeout(typeWriter, 1000);
-    </script>
-
-    <style>
-        .cursor {
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-    </style>
 </body>
 </html>
