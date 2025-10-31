@@ -288,7 +288,31 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            
+            /* Text màu vàng với shadow */
+            color: #FFD700; /* Màu vàng sáng */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+                        0 0 20px rgba(255, 215, 0, 0.3),
+                        0 0 40px rgba(255, 215, 0, 0.2);
+            font-weight: 600;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        /* Hiệu ứng glow */
+        .video-content p::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+            z-index: -1;
         }
 
         .video-container {
@@ -1244,7 +1268,7 @@
         <div class="container">
             <div class="video-content fade-in">
                 <h2 id="main-heading" class="video-content h1">2 năm bén duyên với sầu riêng – phát hiện quy luật tự nhiên đầy thú vị</h2>
-                <p>"Trái sầu riêng cũng giống với các loại trái cây khác, cắt già để 5-7 ngày chín tự nhiên sẽ đảm bảo độ ngon tươi rói – khác biệt. Thơm hơn, ngọt hơn, ngon hơn nha! Mời mọi người xem hết clip để an tâm thưởng thức sầu riêng nhà Cô Tâm nhé!"</p>
+                <p>"Trái sầu riêng cũng giống với các loại trái cây khác, cắt già để 3-7 ngày chín tự nhiên sẽ đảm bảo độ ngon tươi rói – khác biệt. Thơm hơn, ngọt hơn, ngon hơn nha! Mời mọi người xem hết clip để an tâm thưởng thức sầu riêng nhà Cô Tâm nhé!"</p>
                 
                 <div class="video-container">
                     <div class="youtube-video-wrapper">
@@ -1316,7 +1340,7 @@
                     </div>
                     <div class="feature-content">
                         <div class="feature-icon">🌱</div>
-                        <h3>Hạt lép tự nhiên</h3>
+                        <h3>Hạt lép</h3>
                     </div>
                 </div>
                 
@@ -1653,7 +1677,7 @@
                         </iframe>
                     </div>
                     <div class="video-info">
-                        <h3> Âm thanh gõ sầu riêng thần sầu Bốc Bố🫠</h3>
+                        <h3> Âm thanh gõ sầu riêng thần sầu Bốc Bốc</h3>
                     </div>
                 </div>
                 
