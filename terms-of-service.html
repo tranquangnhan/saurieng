@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều Khoản Dịch Vụ - Sầu Riêng Musangking Cô Tâm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-yellow: #FFD166;
+            --secondary-yellow: #FFB347;
+            --primary-green: #2E8B57;
+            --secondary-green: #3CB371;
+            --wood-brown: #8B4513;
+            --light-brown: #D2B48C;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+            --text-light: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFF0CC 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .terms-header {
+            background: linear-gradient(135deg, var(--wood-brown), #A0522D);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .terms-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .terms-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--white);
+            padding: 15px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .breadcrumb nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-green);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--wood-brown);
+        }
+
+        /* Terms Content */
+        .terms-content {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+            border: 2px solid var(--primary-yellow);
+        }
+
+        .terms-section {
+            margin-bottom: 40px;
+        }
+
+        .terms-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .terms-section h2 {
+            color: var(--wood-brown);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-yellow);
+            display: inline-block;
+        }
+
+        .terms-section h3 {
+            color: var(--primary-green);
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+        }
+
+        .terms-section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        .terms-section li {
+            margin-bottom: 10px;
+        }
+
+        .warning-box {
+            background: #FFF3CD;
+            border-left: 4px solid #FFC107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+            border: 1px solid #FFEAA7;
+        }
+
+        .info-box {
+            background: var(--light-yellow);
+            border-left: 4px solid var(--primary-yellow);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Chính sách vận chuyển */
+        .shipping-info {
+            background: #E8F5E8;
+            border: 2px solid var(--primary-green);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .shipping-info h4 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .terms-footer {
+            background: var(--wood-brown);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-yellow);
+            color: var(--wood-brown);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255,209,102,0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .terms-header {
+                padding: 40px 0;
+            }
+            
+            .terms-header h1 {
+                font-size: 2rem;
+            }
+            
+            .terms-content {
+                padding: 30px 25px;
+            }
+            
+            .terms-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .terms-section h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .terms-content {
+                padding: 25px 20px;
+            }
+            
+            .terms-header h1 {
+                font-size: 1.7rem;
+            }
+            
+            .terms-section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .shipping-info {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="terms-header">
+        <div class="container">
+            <h1><i class="fas fa-file-contract"></i> Điều Khoản Dịch Vụ</h1>
+            <p>Quy định và điều kiện sử dụng dịch vụ của chúng tôi</p>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <nav>
+            <a href="/">Trang chủ</a> / <span>Điều Khoản Dịch Vụ</span>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="terms-content">
+            <!-- Giới thiệu -->
+            <section class="terms-section">
+                <h2>1. Chấp Nhận Điều Khoản</h2>
+                <p>Bằng việc truy cập và sử dụng website <strong>sauriengmusangkingcotam.com</strong>, bạn đồng ý tuân thủ và bị ràng buộc bởi các điều khoản và điều kiện sử dụng được nêu dưới đây.</p>
+                
+                <div class="warning-box">
+                    <p><strong>⚠️ Lưu ý quan trọng:</strong> Vui lòng đọc kỹ các điều khoản trước khi sử dụng dịch vụ. Nếu bạn không đồng ý với bất kỳ điều khoản nào, vui lòng không sử dụng website của chúng tôi.</p>
+                </div>
+            </section>
+
+            <!-- Thông tin doanh nghiệp -->
+            <section class="terms-section">
+                <h2>2. Thông Tin Doanh Nghiệp</h2>
+                <p><strong>Sầu Riêng Musangking Cô Tâm</strong></p>
+                <ul>
+                    <li>Địa chỉ: Lô B, Chung cư Bàu Cát 2, đường số 1, Tân Bình, TP.HCM</li>
+                    <li>Hotline: 0978 212 783</li>
+                    <li>Email: info@sauriengmusangkingcotam.com</li>
+                    <li>Thời gian làm việc: 8:00 - 22:00 hàng ngày</li>
+                </ul>
+            </section>
+
+            <!-- Đăng ký tài khoản -->
+            <section class="terms-section">
+                <h2>3. Đăng Ký Tài Khoản</h2>
+                <p>Khi đăng ký tài khoản trên website, bạn cam kết:</p>
+                <ul>
+                    <li>Cung cấp thông tin chính xác, đầy đủ và cập nhật</li>
+                    <li>Bảo mật thông tin tài khoản và mật khẩu</li>
+                    <li>Chịu trách nhiệm cho mọi hoạt động diễn ra dưới tài khoản của bạn</li>
+                    <li>Thông báo ngay lập tức khi phát hiện sử dụng trái phép</li>
+                </ul>
+            </section>
+
+            <!-- Đặt hàng và thanh toán -->
+            <section class="terms-section">
+                <h2>4. Đặt Hàng Và Thanh Toán</h2>
+                
+                <h3>4.1. Quy trình đặt hàng</h3>
+                <ol>
+                    <li>Chọn sản phẩm và số lượng</li>
+                    <li>Điền thông tin giao hàng</li>
+                    <li>Xác nhận đơn hàng</li>
+                    <li>Nhận cuộc gọi xác nhận từ nhân viên</li>
+                    <li>Nhận hàng và thanh toán</li>
+                </ol>
+
+                <h3>4.2. Phương thức thanh toán</h3>
+                <ul>
+                    <li>Thanh toán khi nhận hàng (COD)</li>
+                    <li>Chuyển khoản ngân hàng</li>
+                    <li>Ví điện tử (trong tương lai)</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>💡 Lưu ý:</strong> Đơn hàng chỉ được xác nhận sau khi nhân viên liên hệ xác nhận thành công.</p>
+                </div>
+            </section>
+
+            <!-- Chính sách vận chuyển -->
+            <section class="terms-section">
+                <h2>5. Chính Sách Vận Chuyển</h2>
+                
+                <div class="shipping-info">
+                    <h4><i class="fas fa-shipping-fast"></i> Thông Tin Vận Chuyển</h4>
+                    <ul>
+                        <li><strong>TP.HCM:</strong> Giao hàng trong 2-4 giờ</li>
+                        <li><strong>Tỉnh thành khác:</strong> 1-3 ngày làm việc</li>
+                        <li><strong>Phí vận chuyển:</strong> Miễn phí trong nội thành TP.HCM cho đơn từ 500.000đ</li>
+                        <li><strong>Thời gian giao hàng:</strong> 8:00 - 22:00 hàng ngày</li>
+                    </ul>
+                </div>
+
+                <p>Chúng tôi sẽ thông báo trước khi giao hàng. Vui lòng chuẩn bị sẵn số tiền thanh toán và kiểm tra hàng hóa trước khi nhận.</p>
+            </section>
+
+            <!-- Chính sách đổi trả -->
+            <section class="terms-section">
+                <h2>6. Chính Sách Đổi Trả & Hoàn Tiền</h2>
+                
+                <h3>6.1. Điều kiện đổi trả</h3>
+                <ul>
+                    <li>Sầu riêng bị sượng, non, không đúng chất lượng</li>
+                    <li>Sai loại sầu riêng so với đơn đặt hàng</li>
+                    <li>Hàng hóa bị hư hỏng trong quá trình vận chuyển</li>
+                </ul>
+
+                <h3>6.2. Quy trình đổi trả</h3>
+                <ol>
+                    <li>Chụp hình/video sản phẩm có vấn đề</li>
+                    <li>Liên hệ hotline 0978 212 783</li>
+                    <li>Nhân viên xác nhận và xử lý</li>
+                    <li>Đổi hàng mới hoặc hoàn tiền</li>
+                </ol>
+
+                <div class="warning-box">
+                    <p><strong>⏰ Thời hạn khiếu nại:</strong> Trong vòng 24 giờ kể từ khi nhận hàng. Vui lòng giữ nguyên trạng thái sản phẩm.</p>
+                </div>
+            </section>
+
+            <!-- Quyền sở hữu trí tuệ -->
+            <section class="terms-section">
+                <h2>7. Quyền Sở Hữu Trí Tuệ</h2>
+                <p>Tất cả nội dung trên website bao gồm但不限于 văn bản, hình ảnh, logo, thiết kế thuộc quyền sở hữu của <strong>Sầu Riêng Musangking Cô Tâm</strong>.</p>
+                <p>Bạn không được phép:</p>
+                <ul>
+                    <li>Sao chép, phân phối nội dung không được cho phép</li>
+                    <li>Sử dụng cho mục đích thương mại</li>
+                    <li>Xâm phạm bản quyền và nhãn hiệu</li>
+                </ul>
+            </section>
+
+            <!-- Trách nhiệm pháp lý -->
+            <section class="terms-section">
+                <h2>8. Trách Nhiệm Pháp Lý</h2>
+                <p>Chúng tôi không chịu trách nhiệm cho:</p>
+                <ul>
+                    <li>Lỗi kỹ thuật ngoài tầm kiểm soát</li>
+                    <li>Thông tin không chính xác do người dùng cung cấp</li>
+                    <li>Thiệt hại do sử dụng trái phép tài khoản</li>
+                    <li>Trường hợp bất khả kháng (thiên tai, hỏa hoạn...)</li>
+                </ul>
+            </section>
+
+            <!-- Chấm dứt dịch vụ -->
+            <section class="terms-section">
+                <h2>9. Chấm Dứt Dịch Vụ</h2>
+                <p>Chúng tôi có quyền tạm ngưng hoặc chấm dứt dịch vụ nếu:</p>
+                <ul>
+                    <li>Phát hiện hành vi gian lận</li>
+                    <li>Vi phạm các điều khoản dịch vụ</li>
+                    <li>Theo yêu cầu của cơ quan pháp luật</li>
+                    <li>Bảo trì, nâng cấp hệ thống</li>
+                </ul>
+            </section>
+
+            <!-- Luật áp dụng -->
+            <section class="terms-section">
+                <h2>10. Luật Áp Dụng & Giải Quyết Tranh Chấp</h2>
+                <p>Các điều khoản này được điều chỉnh bởi luật pháp Việt Nam. Mọi tranh chấp sẽ được giải quyết thông qua thương lượng. Nếu không thành công, vụ việc sẽ được đưa ra Tòa án có thẩm quyền tại TP.HCM.</p>
+            </section>
+
+            <!-- Thay đổi điều khoản -->
+            <section class="terms-section">
+                <h2>11. Thay Đổi Điều Khoản</h2>
+                <p>Chúng tôi có quyền sửa đổi các điều khoản này vào bất kỳ lúc nào. Các thay đổi sẽ có hiệu lực ngay khi được đăng tải trên website.</p>
+                <p><strong>Lần cập nhật gần nhất:</strong> 15/01/2024</p>
+            </section>
+
+            <!-- Liên hệ -->
+            <section class="terms-section">
+                <h2>12. Liên Hệ</h2>
+                <p>Nếu bạn có bất kỳ câu hỏi nào về điều khoản dịch vụ, vui lòng liên hệ:</p>
+                <ul>
+                    <li>Hotline: 0978 212 783</li>
+                    <li>Email: info@sauriengmusangkingcotam.com</li>
+                    <li>Địa chỉ: Lô B, Chung cư Bàu Cát 2, đường số 1, Tân Bình, TP.HCM</li>
+                </ul>
+            </section>
+        </div>
+
+        <a href="/" class="back-to-home">
+            <i class="fas fa-arrow-left"></i> Về Trang Chủ
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="terms-footer">
+        <div class="container">
+            <p>&copy; 2024 Sầu Riêng Musangking Cô Tâm. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+</body>
+</html>
