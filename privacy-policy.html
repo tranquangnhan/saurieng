@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính Sách Bảo Mật - Sầu Riêng Musangking Cô Tâm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-yellow: #FFD166;
+            --secondary-yellow: #FFB347;
+            --primary-green: #2E8B57;
+            --secondary-green: #3CB371;
+            --wood-brown: #8B4513;
+            --light-brown: #D2B48C;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+            --text-light: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFF0CC 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .policy-header {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .policy-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .policy-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--white);
+            padding: 15px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .breadcrumb nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-green);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--wood-brown);
+        }
+
+        /* Policy Content */
+        .policy-content {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+            border: 2px solid var(--primary-yellow);
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+        }
+
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section h2 {
+            color: var(--wood-brown);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-yellow);
+            display: inline-block;
+        }
+
+        .policy-section h3 {
+            color: var(--primary-green);
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+        }
+
+        .policy-section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .policy-section ul, .policy-section ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        .policy-section li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: var(--light-yellow);
+            border-left: 4px solid var(--primary-yellow);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            background: var(--light-yellow);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+            border: 1px solid var(--primary-yellow);
+        }
+
+        .contact-info h3 {
+            color: var(--wood-brown);
+            margin-bottom: 15px;
+        }
+
+        .phone-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        .policy-footer {
+            background: var(--wood-brown);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-yellow);
+            color: var(--wood-brown);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255,209,102,0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .policy-header {
+                padding: 40px 0;
+            }
+            
+            .policy-header h1 {
+                font-size: 2rem;
+            }
+            
+            .policy-content {
+                padding: 30px 25px;
+            }
+            
+            .policy-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .policy-section h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .policy-content {
+                padding: 25px 20px;
+            }
+            
+            .policy-header h1 {
+                font-size: 1.7rem;
+            }
+            
+            .policy-section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .contact-info {
+                padding: 20px;
+            }
+            
+            .phone-number {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="policy-header">
+        <div class="container">
+            <h1><i class="fas fa-shield-alt"></i> Chính Sách Bảo Mật</h1>
+            <p>Bảo vệ thông tin của bạn là ưu tiên hàng đầu của chúng tôi</p>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <nav>
+            <a href="/">Trang chủ</a> / <span>Chính Sách Bảo Mật</span>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="policy-content">
+            <!-- Giới thiệu -->
+            <section class="policy-section">
+                <h2>1. Giới Thiệu</h2>
+                <p>Chào mừng bạn đến với <strong>Sầu Riêng Musangking Cô Tâm</strong>. Chúng tôi cam kết bảo vệ quyền riêng tư và thông tin cá nhân của khách hàng. Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>📝 Lưu ý quan trọng:</strong> Bằng việc sử dụng website và dịch vụ của chúng tôi, bạn đồng ý với các điều khoản trong chính sách bảo mật này.</p>
+                </div>
+            </section>
+
+            <!-- Thông tin thu thập -->
+            <section class="policy-section">
+                <h2>2. Thông Tin Chúng Tôi Thu Thập</h2>
+                
+                <h3>2.1. Thông tin cá nhân</h3>
+                <ul>
+                    <li>Họ và tên</li>
+                    <li>Số điện thoại liên hệ</li>
+                    <li>Địa chỉ email</li>
+                    <li>Địa chỉ giao hàng</li>
+                    <li>Thông tin thanh toán (nếu có)</li>
+                </ul>
+
+                <h3>2.2. Thông tin tự động</h3>
+                <ul>
+                    <li>Địa chỉ IP</li>
+                    <li>Thông tin trình duyệt và thiết bị</li>
+                    <li>Cookie và công nghệ theo dõi tương tự</li>
+                    <li>Lịch sử truy cập và tương tác với website</li>
+                </ul>
+            </section>
+
+            <!-- Mục đích sử dụng -->
+            <section class="policy-section">
+                <h2>3. Mục Đích Sử Dụng Thông Tin</h2>
+                <ul>
+                    <li>Xử lý đơn hàng và giao hàng</li>
+                    <li>Hỗ trợ khách hàng và tư vấn sản phẩm</li>
+                    <li>Cải thiện chất lượng dịch vụ</li>
+                    <li>Gửi thông tin khuyến mãi (nếu bạn đồng ý)</li>
+                    <li>Ngăn chặn gian lận và bảo vệ an ninh</li>
+                    <li>Tuân thủ các quy định pháp luật</li>
+                </ul>
+            </section>
+
+            <!-- Chia sẻ thông tin -->
+            <section class="policy-section">
+                <h2>4. Chia Sẻ Thông Tin</h2>
+                <p>Chúng tôi <strong>KHÔNG</strong> bán, trao đổi hoặc chuyển nhượng thông tin cá nhân của bạn cho bên thứ ba, trừ các trường hợp:</p>
+                <ul>
+                    <li>Đối tác vận chuyển để giao hàng</li>
+                    <li>Nhà cung cấp dịch vụ thanh toán</li>
+                    <li>Theo yêu cầu của cơ quan pháp luật</li>
+                    <li>Khi có sự đồng ý của bạn</li>
+                </ul>
+            </section>
+
+            <!-- Bảo mật thông tin -->
+            <section class="policy-section">
+                <h2>5. Bảo Mật Thông Tin</h2>
+                <p>Chúng tôi áp dụng các biện pháp bảo mật bao gồm:</p>
+                <ul>
+                    <li>Mã hóa dữ liệu nhạy cảm</li>
+                    <li>Hệ thống tường lửa và bảo mật</li>
+                    <li>Giới hạn quyền truy cập thông tin</li>
+                    <li>Đào tạo nhân viên về bảo mật</li>
+                </ul>
+            </section>
+
+            <!-- Quyền của khách hàng -->
+            <section class="policy-section">
+                <h2>6. Quyền Của Khách Hàng</h2>
+                <p>Bạn có quyền:</p>
+                <ul>
+                    <li>Truy cập và xem thông tin cá nhân</li>
+                    <li>Yêu cầu chỉnh sửa thông tin không chính xác</li>
+                    <li>Yêu cầu xóa thông tin cá nhân</li>
+                    <li>Rút lại sự đồng ý về tiếp thị</li>
+                    <li>Khiếu nại về việc xử lý thông tin</li>
+                </ul>
+            </section>
+
+            <!-- Cookie -->
+            <section class="policy-section">
+                <h2>7. Chính Sách Cookie</h2>
+                <p>Website sử dụng cookie để:</p>
+                <ul>
+                    <li>Ghi nhớ tùy chọn của người dùng</li>
+                    <li>Phân tích lưu lượng truy cập</li>
+                    <li>Cải thiện trải nghiệm người dùng</li>
+                    <li>Hiển thị quảng cáo phù hợp</li>
+                </ul>
+                <p>Bạn có thể tắt cookie trong trình duyệt, nhưng có thể ảnh hưởng đến trải nghiệm sử dụng.</p>
+            </section>
+
+            <!-- Liên hệ -->
+            <section class="policy-section">
+                <h2>8. Liên Hệ</h2>
+                <p>Nếu bạn có bất kỳ câu hỏi nào về chính sách bảo mật, vui lòng liên hệ:</p>
+                
+                <div class="contact-info">
+                    <h3>Sầu Riêng Musangking Cô Tâm</h3>
+                    <p>Địa chỉ: Lô B, Chung cư Bàu Cát 2, đường số 1, Tân Bình, TP.HCM</p>
+                    <div class="phone-number">
+                        <i class="fas fa-phone-alt"></i> 0978 212 783
+                    </div>
+                    <p>Email: info@sauriengmusangkingcotam.com</p>
+                    <p>Thời gian làm việc: Thứ 2 - Chủ Nhật, 8:00 - 22:00</p>
+                </div>
+            </section>
+
+            <!-- Cập nhật -->
+            <section class="policy-section">
+                <h2>9. Cập Nhật Chính Sách</h2>
+                <p>Chúng tôi có thể cập nhật chính sách bảo mật này theo thời gian. Mọi thay đổi sẽ được thông báo trên trang web này.</p>
+                <p><strong>Lần cập nhật gần nhất:</strong> 15/01/2024</p>
+            </section>
+        </div>
+
+        <a href="/" class="back-to-home">
+            <i class="fas fa-arrow-left"></i> Về Trang Chủ
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="policy-footer">
+        <div class="container">
+            <p>&copy; 2024 Sầu Riêng Musangking Cô Tâm. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+</body>
+</html>
