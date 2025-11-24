@@ -1371,6 +1371,129 @@ Sầu riêng Musangking cắt già chín cây tự nhiên, Tươi rói, cơm và
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.9rem;
         }
+                /* Footer Links Container */
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 25px 0;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Footer Link Items */
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-yellow);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .footer-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary-yellow);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .footer-links a:hover::before {
+            width: 80%;
+        }
+
+        /* Icon cho links */
+        .footer-links a i {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .footer-links {
+                gap: 15px;
+                margin: 20px 0;
+                padding: 15px 0;
+            }
+            
+            .footer-links a {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            
+            .footer-links a {
+                font-size: 0.85rem;
+                padding: 8px 20px;
+                min-width: 200px;
+                justify-content: center;
+            }
+        }
+
+        /* Alternative Style - Minimal */
+        .footer-links.minimal {
+            border: none;
+            gap: 30px;
+        }
+
+        .footer-links.minimal a {
+            padding: 5px 0;
+            background: none;
+        }
+
+        .footer-links.minimal a:hover {
+            background: none;
+            transform: none;
+        }
+
+        .footer-links.minimal a::before {
+            bottom: -2px;
+        }
+
+        /* Alternative Style - Boxed */
+        .footer-links.boxed {
+            border: none;
+            gap: 15px;
+        }
+
+        .footer-links.boxed a {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+        }
+
+        .footer-links.boxed a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary-yellow);
+        }
+
+            /*end footer link  */
+
 
         /* Responsive Footer */
         @media (max-width: 992px) {
@@ -2686,10 +2809,7 @@ Sầu riêng Musangking cắt già chín cây tự nhiên, Tươi rói, cơm và
                 <i class="fas fa-file-contract"></i>
                 Điều Khoản Dịch Vụ
             </a>
-            <a href="/refund-policy.html">
-                <i class="fas fa-exchange-alt"></i>
-                Chính Sách Đổi Trả
-            </a>
+           
         </div>
         
         <!-- Copyright -->
