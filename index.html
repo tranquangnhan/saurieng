@@ -1316,6 +1316,81 @@ Sầu riêng Musangking cắt già chín cây tự nhiên, Tươi rói, cơm và
             height: 85px;
         }
 
+                /* Footer Container */
+        .site-footer {
+            background: var(--wood-brown);
+            color: white;
+            padding: 50px 0 30px;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--primary-yellow);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary-yellow);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Footer */
+        @media (max-width: 992px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .site-footer {
+                padding: 40px 0 20px;
+            }
+        }
+
         /* Animations */
         @keyframes float {
             0%, 100% {
@@ -2557,7 +2632,72 @@ Sầu riêng Musangking cắt già chín cây tự nhiên, Tươi rói, cơm và
         </div>
     </section>
 
-
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <!-- Column 1: Thông tin -->
+            <div class="footer-column">
+                <h3>Về Cô Tâm</h3>
+                <ul>
+                    <li><a href="/about.html"><i class="fas fa-store"></i> Giới thiệu</a></li>
+                    <li><a href="/contact.html"><i class="fas fa-map-marker-alt"></i> Liên hệ</a></li>
+                    <li><a href="/blog.html"><i class="fas fa-blog"></i> Tin tức</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 2: Sản phẩm -->
+            <div class="footer-column">
+                <h3>Sản phẩm</h3>
+                <ul>
+                    <li><a href="/#products"><i class="fas fa-apple-alt"></i> Musang King</a></li>
+                    <li><a href="/#products"><i class="fas fa-apple-alt"></i> RI6</a></li>
+                    <li><a href="/#products"><i class="fas fa-gift"></i> Combo quà tặng</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Hỗ trợ -->
+            <div class="footer-column">
+                <h3>Hỗ trợ</h3>
+                <ul>
+                    <li><a href="/shipping-policy.html"><i class="fas fa-shipping-fast"></i> Vận chuyển</a></li>
+                    <li><a href="/refund-policy.html"><i class="fas fa-exchange-alt"></i> Đổi trả</a></li>
+                    <li><a href="/faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4: Liên hệ -->
+            <div class="footer-column">
+                <h3>Liên hệ</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 0978 212 783</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Tân Bình, TP.HCM</li>
+                    <li><i class="fas fa-clock"></i> 8:00 - 22:00</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Policy Links -->
+        <div class="footer-links">
+            <a href="/privacy-policy.html">
+                <i class="fas fa-shield-alt"></i>
+                Chính Sách Bảo Mật
+            </a>
+            <a href="/terms-of-service.html">
+                <i class="fas fa-file-contract"></i>
+                Điều Khoản Dịch Vụ
+            </a>
+            <a href="/refund-policy.html">
+                <i class="fas fa-exchange-alt"></i>
+                Chính Sách Đổi Trả
+            </a>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sầu Riêng Musangking Cô Tâm. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
     <!-- Nút Hotline Fixed -->
     <div class="hotline-button">
         <a href="tel:0978212783" class="hotline-link">
