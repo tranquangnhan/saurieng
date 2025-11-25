@@ -140,7 +140,61 @@
             padding: 25px 0;
             margin-top: 40px;
         }
+        /* Thêm vào CSS hiện có */
+        .highlight-box strong {
+            color: var(--primary-green);
+        }
 
+        .policy-section h3 {
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            margin: 20px 0 15px;
+            padding-left: 15px;
+            border-left: 3px solid var(--primary-yellow);
+        }
+
+        /* Style cho các box đặc biệt */
+        .security-commitment {
+            background: linear-gradient(135deg, #E8F5E8, #C8E6C9);
+            border: 2px solid var(--primary-green);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .security-commitment::before {
+            content: '🔒';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            border: 2px solid var(--primary-green);
+        }
+
+        .no-sharing {
+            background: linear-gradient(135deg, #FFEBEE, #FFCDD2);
+            border: 2px solid #F44336;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .no-sharing::before {
+            content: '🚫';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            border: 2px solid #F44336;
+        }
         @media (max-width: 768px) {
             .policy-content {
                 padding: 25px;
@@ -223,6 +277,99 @@
                     <li>Chúng tôi không chia sẻ thông tin với bên thứ ba</li>
                     <li>Thông tin được bảo vệ và chỉ lưu trữ khi cần thiết</li>
                 </ul>
+            </section>
+
+                        <!-- Cam kết bảo mật -->
+            <section class="policy-section">
+                <h2>6. Cam Kết Bảo Mật Của Chúng Tôi</h2>
+                
+                <div class="highlight-box" style="background: #E8F5E8; border-left-color: var(--primary-green);">
+                    <p><strong>🔒 CAM KẾT QUAN TRỌNG:</strong></p>
+                    <ul style="margin: 10px 0 0 20px;">
+                        <li>Số điện thoại của bạn <strong>CHỈ ĐƯỢC SỬ DỤNG</strong> để liên hệ giao hàng và tư vấn sản phẩm</li>
+                        <li><strong>KHÔNG BAO GIỜ</strong> bán, chia sẻ hoặc cho thuê thông tin của bạn</li>
+                        <li><strong>KHÔNG</strong> gửi tin nhắn rác, quảng cáo không mong muốn</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Cách thức bảo mật -->
+            <section class="policy-section">
+                <h2>7. Cách Thức Bảo Mật Thông Tin</h2>
+                
+                <h3 style="color: var(--primary-green); margin: 20px 0 15px; font-size: 1.2rem;">7.1. Đối với thông tin liên hệ</h3>
+                <ul>
+                    <li><strong>Lưu trữ an toàn:</strong> Số điện thoại chỉ được lưu trong danh bạ cá nhân của nhân viên phụ trách</li>
+                    <li><strong>Giới hạn truy cập:</strong> Chỉ nhân viên giao hàng và chăm sóc khách hàng được tiếp cận</li>
+                    <li><strong>Xóa sau khi hoàn tất:</strong> Thông tin sẽ được xóa sau 30 ngày kể từ khi giao hàng thành công</li>
+                </ul>
+
+                <h3 style="color: var(--primary-green); margin: 20px 0 15px; font-size: 1.2rem;">7.2. Biện pháp bảo vệ</h3>
+                <ul>
+                    <li><strong>Đào tạo nhân viên:</strong> Tất cả nhân viên được đào tạo về bảo mật thông tin khách hàng</li>
+                    <li><strong>Không ghi chép công khai:</strong> Thông tin không được ghi ra sổ hay file dễ truy cập</li>
+                    <li><strong>Mã hóa khi cần:</strong> Nếu lưu trữ số điện thoại, chúng tôi sẽ mã hóa để bảo vệ</li>
+                </ul>
+            </section>
+
+            <!-- Quy trình xử lý thông tin -->
+            <section class="policy-section">
+                <h2>8. Quy Trình Xử Lý Thông Tin</h2>
+                
+                <div style="background: #FFF3CD; border-left: 4px solid #FFC107; padding: 20px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+                    <p><strong>📞 Khi bạn gọi điện đặt hàng:</strong></p>
+                    <ol style="margin: 10px 0 0 20px;">
+                        <li>Nhân viên ghi nhận số điện thoại và địa chỉ giao hàng</li>
+                        <li>Thông tin được chuyển trực tiếp cho shipper</li>
+                        <li>Shipper liên hệ xác nhận và giao hàng</li>
+                        <li>Thông tin được xóa sau khi giao hàng thành công</li>
+                    </ol>
+                </div>
+                
+                <div style="background: #E3F2FD; border-left: 4px solid #2196F3; padding: 20px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+                    <p><strong>💬 Khi bạn nhắn tin qua Zalo/Facebook:</strong></p>
+                    <ol style="margin: 10px 0 0 20px;">
+                        <li>Thông tin được lưu trong ứng dụng nhắn tin</li>
+                        <li>Chỉ sử dụng để trao đổi về đơn hàng</li>
+                        <li>Không lưu trữ ra ngoài ứng dụng</li>
+                        <li>Xóa lịch sử chat sau 30 ngày</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Cam kết không chia sẻ -->
+            <section class="policy-section">
+                <h2>9. Cam Kết Không Chia Sẻ Thông Tin</h2>
+                
+                <div class="highlight-box" style="background: #FFEBEE; border-left-color: #F44336;">
+                    <p><strong>🚫 CHÚNG TÔI CAM KẾT KHÔNG:</strong></p>
+                    <ul style="margin: 10px 0 0 20px;">
+                        <li>Bán, trao đổi hoặc cho thuê thông tin khách hàng</li>
+                        <li>Chia sẻ với các công ty quảng cáo, marketing</li>
+                        <li>Cung cấp cho bên thứ ba vì mục đích thương mại</li>
+                        <li>Sử dụng thông tin để gửi spam, quảng cáo không liên quan</li>
+                    </ul>
+                </div>
+                
+                <p style="margin-top: 15px;"><strong>Trường hợp ngoại lệ duy nhất:</strong> Chỉ cung cấp thông tin khi có yêu cầu chính thức từ cơ quan pháp luật có thẩm quyền.</p>
+            </section>
+
+            <!-- Quyền của khách hàng -->
+            <section class="policy-section">
+                <h2>10. Quyền Của Khách Hàng</h2>
+                
+                <p>Bạn có quyền:</p>
+                <ul>
+                    <li><strong>Yêu cầu xóa thông tin:</strong> Liên hệ ngay để chúng tôi xóa số điện thoại của bạn khỏi hệ thống</li>
+                    <li><strong>Xác nhận thông tin:</strong> Biết chính xác thông tin nào của bạn đang được lưu trữ</li>
+                    <li><strong>Khiếu nại:</strong> Phản ánh nếu phát hiện vi phạm bảo mật</li>
+                    <li><strong>Ngừng liên hệ:</strong> Yêu cầu dừng mọi cuộc gọi/tin nhắn nếu không mong muốn</li>
+                </ul>
+                
+                <div style="background: #E8F5E8; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <p><strong>💡 Làm thế nào để thực hiện các quyền này?</strong></p>
+                    <p>Chỉ cần gọi <strong>0978 212 783</strong> và yêu cầu trực tiếp với nhân viên. Chúng tôi sẽ xử lý ngay lập tức!</p>
+                </div>
             </section>
 
             <!-- Liên hệ -->
